@@ -1,0 +1,35 @@
+.form {
+  @include shadow;
+
+  padding: 16px;
+}
+
+@media (min-width: $width-tablet) {
+  .form {
+    padding: 24px;
+  }
+}
+
+.form__list {
+  @include reset-list;
+}
+
+.form__list input,
+.form__list textarea {
+  @include form-shadow;
+
+  width: 100%;
+}
+
+.form__list textarea {
+  resize: vertical;
+}
+
+.form button {
+  width: 100%;
+  min-height: 36px;
+  margin-top: 24px;
+  border: 0;
+  background-color: $lighter-grey;
+  border-radius: 10px;
+}

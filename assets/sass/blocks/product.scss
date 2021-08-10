@@ -1,0 +1,35 @@
+.product {
+  @include shadow;
+
+  position: relative;
+}
+
+.product a {
+  text-decoration: none;
+  color: $grey;
+}
+
+.product a:hover {
+  cursor: pointer;
+}
+
+.product a:hover::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -8px;
+  right: -8px;
+  background-image: url("~assets/img/delete-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.product img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product__information {
+  padding: 16px 16px 24px 16px;
+}
